@@ -1,0 +1,50 @@
+trigger:
+  - master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  - group: containergroup
+  - name: containerImage
+    value: elm-lmp-web:$(Build.BuildId)
+  - name: repository
+    value: elm-lmp-web
+  - name: testOutputDir
+    value: test-output
+
+steps:
+- task: Docker@2
+  displayName: Build production image
+  inputs:
+    command: build
+    containerRegistry: $(azureContainerRegistry)
+    repository: $(repository)
+    arguments: -t $(containerImage)
+
+- bash: docker build -t $(containerImage)-development --target=development .
+  displayName: Build development image
+
+- bash: docker build -t $(containerImage)-pa11y --target=pa11y .
+  displayName: Build Pa11y image
+
+- bash: bin/docker/test
+  displayName: Test
+  env:
+    CONTAINER_IMAGE: $(containerImage)
+    OUTPUT_DIR: $(testOutputDir)
+
+- task: PublishTestResults@2
+  displayName: Publish test results
+  inputs:
+    testResultsFormat: JUnit
+    testResultsFiles: $(testOutputDir)/TEST-*.xml
+    failTaskOnFailedTests: true
+    testRunTitle: Unit-test
+
+- task: Docker@2
+  displayName: Push production image
+  inputs:
+    command: push
+    containerRegistry: $(azureContainerRegistry)
+    repository: $(repository)

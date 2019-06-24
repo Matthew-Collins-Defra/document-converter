@@ -1,0 +1,10 @@
+.config/
+.DS_Store/
+.npm/
+.vscode/
+node_modules/
+server/public/build/
+test-output/
+npm-debug.log
+lcov.info
+TEST-*.xml
