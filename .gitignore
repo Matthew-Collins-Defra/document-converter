@@ -1,0 +1,12 @@
+.DS_Store
+.vscode
+node_modules
+npm-debug.log
+server/public/build
+lcov.info
+metafile.yml
+
+inbound/*
+outbound/*
+lua-filters
+pandoc
