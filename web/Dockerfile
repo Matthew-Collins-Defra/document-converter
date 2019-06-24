@@ -54,12 +54,12 @@ FROM node:${NODE_VERSION}-alpine AS production
 
 ARG NODE_ENV=production
 ENV NODE_ENV ${NODE_ENV}
-ENV PORT 3000
+ENV PORT 80
 
-USER node
+USER root
 WORKDIR /home/node
 
-EXPOSE 3000
+EXPOSE 80
 
 COPY --chown=node:node --from=prodbase /home/node/package.json /home/node/package-lock.json /home/node/
 COPY --chown=node:node --from=prodbase /home/node/node_modules /home/node/node_modules/

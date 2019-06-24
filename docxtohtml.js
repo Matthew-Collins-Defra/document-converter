@@ -61,13 +61,14 @@ function MoveMedia (mediapath) {
 
 function convertFile (file) {
   const filePath = path.join(inboundFolder, file)
+  const title = path.basename(file)
   const name = `${path.basename(file, path.extname(filePath))}_${new Date().getTime()}`
   const mediapath = path.join(outboundFolder, path.basename(filePath, path.extname(filePath)))
-  const outFileName = `${path.join(mediapath, name)}.md`
+  const outFileName = `${path.join(mediapath, name)}.html`
   if (!fs.existsSync(mediapath)) {
     fs.mkdirSync(mediapath)
   }
-  const args = ['-f', 'docx', '-t', 'markdown_mmd-grid_tables-yaml_metadata_block-mmd_title_block', '-o', outFileName, '--extract-media', '.', '--standalone', '--wrap', 'none', '--lua-filter', 'lines.lua']
+  const args = ['-f', 'docx', '-t', 'html-grid_tables-yaml_metadata_block-mmd_title_block', '-o', outFileName, '--extract-media', '.', '--standalone', '--wrap', 'none', '--metadata', `pagetitle="${title}"`]
 
   const callback = (err, result) => {
     if (err) { console.error(err) }

@@ -6,6 +6,7 @@ module.exports = {
   method: 'GET',
   path: '/{documentid}',
   options: {
+    auth: 'simple',
     handler: async (request, h) => {
       const md = new Remarkable({ html: true })
       var doc = null
