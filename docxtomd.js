@@ -67,7 +67,6 @@ function convertFile (file) {
   if (!fs.existsSync(mediapath)) {
     fs.mkdirSync(mediapath)
   }
-  //const args = ['-f', 'docx', '-t', 'markdown_mmd-simple_tables-multiline_tables-grid_tables', '-o', outFileName, '--extract-media', '.']
   const args = ['-f', 'docx', '-t', 'markdown-grid_tables-yaml_metadata_block-mmd_title_block', '-o', outFileName, '--extract-media', '.', '--standalone', '--wrap', 'none']
 
   const callback = (err, result) => {
