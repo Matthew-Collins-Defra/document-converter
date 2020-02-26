@@ -68,7 +68,7 @@ function convertFile (file) {
     fs.mkdirSync(mediapath)
   }
   const args = ['-f', 'docx', '-t', 'markdown_mmd-grid_tables-yaml_metadata_block-mmd_title_block', '-o', outFileName, '--extract-media', '.', '--standalone', '--wrap', 'none', '--lua-filter', 'lines.lua']
-
+  
   const callback = (err, result) => {
     if (err) { console.error(err) }
     if (result) {
