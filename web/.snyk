@@ -1,4 +1,104 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
 version: v1.13.5
-ignore: {}
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  SNYK-JS-AMMO-548920:
+    - hapi > ammo:
+        reason: None given
+        expires: '2020-03-27T15:26:54.470Z'
+    - inert > ammo:
+        reason: None given
+        expires: '2020-03-27T15:26:54.470Z'
+  SNYK-JS-HAPI-548911:
+    - hapi:
+        reason: None given
+        expires: '2020-03-27T15:26:54.470Z'
+  SNYK-JS-KINDOF-537849:
+    - nunjucks > chokidar > braces > snapdragon-node > define-property > is-descriptor > is-accessor-descriptor > kind-of:
+        reason: None given
+        expires: '2020-03-27T15:26:54.470Z'
+    - nunjucks > chokidar > braces > to-regex > define-property > is-descriptor > is-accessor-descriptor > kind-of:
+        reason: None given
+        expires: '2020-03-27T15:26:54.470Z'
+    - nunjucks > chokidar > anymatch > micromatch > define-property > is-descriptor > is-accessor-descriptor > kind-of:
+        reason: None given
+        expires: '2020-03-27T15:26:54.470Z'
+    - nunjucks > chokidar > readdirp > micromatch > define-property > is-descriptor > is-accessor-descriptor > kind-of:
+        reason: None given
+        expires: '2020-03-27T15:26:54.470Z'
+    - nunjucks > chokidar > braces > snapdragon-node > define-property > is-descriptor > is-data-descriptor > kind-of:
+        reason: None given
+        expires: '2020-03-27T15:26:54.470Z'
+    - nunjucks > chokidar > braces > to-regex > define-property > is-descriptor > is-data-descriptor > kind-of:
+        reason: None given
+        expires: '2020-03-27T15:26:54.470Z'
+    - nunjucks > chokidar > anymatch > micromatch > define-property > is-descriptor > is-data-descriptor > kind-of:
+        reason: None given
+        expires: '2020-03-27T15:26:54.470Z'
+    - nunjucks > chokidar > readdirp > micromatch > define-property > is-descriptor > is-data-descriptor > kind-of:
+        reason: None given
+        expires: '2020-03-27T15:26:54.470Z'
+    - nunjucks > chokidar > braces > snapdragon > base > define-property > is-descriptor > is-accessor-descriptor > kind-of:
+        reason: None given
+        expires: '2020-03-27T15:26:54.471Z'
+    - nunjucks > chokidar > anymatch > micromatch > extglob > define-property > is-descriptor > is-accessor-descriptor > kind-of:
+        reason: None given
+        expires: '2020-03-27T15:26:54.471Z'
+    - nunjucks > chokidar > readdirp > micromatch > extglob > define-property > is-descriptor > is-accessor-descriptor > kind-of:
+        reason: None given
+        expires: '2020-03-27T15:26:54.471Z'
+    - nunjucks > chokidar > anymatch > micromatch > to-regex > define-property > is-descriptor > is-accessor-descriptor > kind-of:
+        reason: None given
+        expires: '2020-03-27T15:26:54.471Z'
+    - nunjucks > chokidar > readdirp > micromatch > extglob > expand-brackets > to-regex > define-property > is-descriptor > is-accessor-descriptor > kind-of:
+        reason: None given
+        expires: '2020-03-27T15:26:54.471Z'
+    - nunjucks > chokidar > anymatch > micromatch > braces > snapdragon > base > define-property > is-descriptor > is-data-descriptor > kind-of:
+        reason: None given
+        expires: '2020-03-27T15:26:54.471Z'
+    - nunjucks > chokidar > readdirp > micromatch > braces > snapdragon > base > define-property > is-descriptor > is-data-descriptor > kind-of:
+        reason: None given
+        expires: '2020-03-27T15:26:54.471Z'
+    - nunjucks > chokidar > anymatch > micromatch > extglob > snapdragon > base > define-property > is-descriptor > is-data-descriptor > kind-of:
+        reason: None given
+        expires: '2020-03-27T15:26:54.471Z'
+    - nunjucks > chokidar > readdirp > micromatch > extglob > snapdragon > base > define-property > is-descriptor > is-data-descriptor > kind-of:
+        reason: None given
+        expires: '2020-03-27T15:26:54.471Z'
+    - nunjucks > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > define-property > is-descriptor > is-data-descriptor > kind-of:
+        reason: None given
+        expires: '2020-03-27T15:26:54.471Z'
+    - nunjucks > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > define-property > is-descriptor > is-data-descriptor > kind-of:
+        reason: None given
+        expires: '2020-03-27T15:26:54.471Z'
+    - nunjucks > chokidar > anymatch > micromatch > extglob > expand-brackets > to-regex > define-property > is-descriptor > is-data-descriptor > kind-of:
+        reason: None given
+        expires: '2020-03-27T15:26:54.471Z'
+    - nunjucks > chokidar > readdirp > micromatch > extglob > expand-brackets > to-regex > define-property > is-descriptor > is-data-descriptor > kind-of:
+        reason: None given
+        expires: '2020-03-27T15:26:54.471Z'
+    - nunjucks > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > define-property > is-descriptor > is-accessor-descriptor > kind-of:
+        reason: None given
+        expires: '2020-03-27T15:26:54.471Z'
+    - nunjucks > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > define-property > is-descriptor > is-accessor-descriptor > kind-of:
+        reason: None given
+        expires: '2020-03-27T15:26:54.471Z'
+    - nunjucks > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > define-property > is-descriptor > is-data-descriptor > kind-of:
+        reason: None given
+        expires: '2020-03-27T15:26:54.471Z'
+    - nunjucks > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > define-property > is-descriptor > is-data-descriptor > kind-of:
+        reason: None given
+        expires: '2020-03-27T15:26:54.471Z'
+  SNYK-JS-SUBTEXT-467257:
+    - hapi > subtext:
+        reason: None given
+        expires: '2020-03-27T15:26:54.471Z'
+  SNYK-JS-SUBTEXT-548913:
+    - hapi > subtext:
+        reason: None given
+        expires: '2020-03-27T15:26:54.471Z'
+  SNYK-JS-SUBTEXT-548915:
+    - hapi > subtext:
+        reason: None given
+        expires: '2020-03-27T15:26:54.471Z'
 patch: {}
