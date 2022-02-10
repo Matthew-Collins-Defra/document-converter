@@ -43,7 +43,7 @@
     "good-file": "6.0.1",
     "good-squeeze": "5.1.0",
     "lab": "^18.0.2",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "pa11y-ci": "^2.3.0",
     "snyk": "^1.297.1",
     "standard": "^14.0.1"
